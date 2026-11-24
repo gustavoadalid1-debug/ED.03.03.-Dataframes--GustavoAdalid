@@ -5,7 +5,7 @@ from pyspark.sql.functions import col, desc, sum, avg, count, trim, when, to_dat
 
 ruta = os.path.join(os.path.dirname(os.path.abspath(__file__)), "DATOS", "pdi_sales.csv")
 
-spark = SparkSession.builder.appName("Proyecto-Ventas").master("local[*]").getOrCreate()
+spark = SparkSession.builder.appName("Proyecto-Ventas").master("local[*]").config("spark.ui.showConsoleProgress", "false").getOrCreate()
 spark.sparkContext.setLogLevel("ERROR")
 
 

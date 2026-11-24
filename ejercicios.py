@@ -1,7 +1,7 @@
 from pyspark.sql import SparkSession, Window
 from pyspark.sql.functions import col, desc, avg, max, min, sum, count, rank, trim, concat_ws
 
-spark = SparkSession.builder.appName("Ejercicios-DataFrames").master("local[*]").getOrCreate()
+spark = SparkSession.builder.appName("Ejercicios-DataFrames").master("local[*]").config("spark.ui.showConsoleProgress", "false").getOrCreate()
 spark.sparkContext.setLogLevel("ERROR")
 
 
