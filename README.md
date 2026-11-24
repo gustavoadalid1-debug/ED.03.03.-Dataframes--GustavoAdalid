@@ -4,6 +4,7 @@ Gustavo Adalid Catalán Carmen
 
 Práctica de DataFrames en Spark SQL con PySpark:
 
+- `ED.03.03-DataFrames.ipynb`: notebook con los 8 ejercicios y el proyecto de ventas, listo para ejecutar celda por celda.
 - `ejercicios.py`: los 8 ejercicios prácticos (creación, filtrado, columnas, agregaciones, window functions, joins, SQL puro y funciones de string).
 - `proyecto_ventas.py`: proyecto de análisis de ventas por país con `pdi_sales.csv`.
 
@@ -53,7 +54,26 @@ wget "https://raw.githubusercontent.com/josepgarcia/datos/main/pdi_sales.csv" -P
 
 El archivo usa `;` como separador y queda en `DATOS/pdi_sales.csv` (no se sube al repositorio).
 
-## Ejecución
+## Ejecución con el notebook
+
+Con el entorno virtual activado, desde la raíz del repositorio:
+
+```bash
+jupyter notebook ED.03.03-DataFrames.ipynb
+```
+
+Ejecuta todas las celdas (`Run > Run All Cells`). La celda de descarga del proyecto ya incluye el `wget`, así que no hace falta el paso 4 si usas el notebook.
+
+Para exportar a PDF desde Jupyter (`File > Save and Export Notebook As > PDF`) hace falta LaTeX y pandoc:
+
+```bash
+sudo dnf install -y pandoc texlive-xetex texlive-collection-latexrecommended
+jupyter nbconvert --to pdf ED.03.03-DataFrames.ipynb
+```
+
+Si prefieres no instalar LaTeX, exporta a HTML (`jupyter nbconvert --to html ED.03.03-DataFrames.ipynb`), ábrelo en el navegador e imprímelo como PDF.
+
+## Ejecución con los scripts
 
 Con el entorno virtual activado, desde la raíz del repositorio:
 
